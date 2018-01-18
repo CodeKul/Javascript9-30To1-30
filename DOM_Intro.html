@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>
+        Introduction
+    </h1>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, tempore! Quia eum, ipsa deserunt neque facilis tempore natus doloribus delectus eius atque necessitatibus, laboriosam. Fugit?
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet.
+    </p>
+    <h1>After Para</h1>
+</body>
+<script>
+    var heading = document.getElementsByTagName("h1")[0];
+    console.log(heading.childNodes[0].nodeValue);
+    document.getElementsByTagName("h1")[1].innerHTML = heading.childNodes[0].nodeValue
+</script>
+</html>

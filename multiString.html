@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MultiString And Template Literals</title>
+</head>
+<body>
+    <h1>MultiString And Template Literals</h1>
+    
+</body>
+<script>
+    var number = 56;
+    var number1 = 48;
+var str1 = "String is like this kind of struture in" + number +"<strong>Double</strong> quotes"; 
+var str2 =  'String is like this kind of struture in <strong>singal</strong> quotes'; 
+    document.write("<br>"+str1);
+    document.write("<br>"+str2);
+    
+var str3 = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+Dicta aspernatur sed deleniti, <strong>distinctio </strong>modi reprehenderit porro saepe placeat in ${number} ${str1} magnam pariatur sapiente, esse culpa corporis!`
+   document.write("<br>"+str3);
+    document.write(`Addition is : ${number+number1}`);
+</script>
+</html>

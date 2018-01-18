@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Types</title>
+</head>
+<body>
+   <h1>Data Types</h1> 
+</body>
+<script>
+    var number = 15;
+    var string = 'Codekul';
+    var Str = "Hello Wrold";
+//    number = "something";
+    var bool = true;
+    var Empty = null;
+    var arr = [0,true,false];
+    document.write("<br>Data Type Number: "+typeof(number));
+     document.write("<br>Data Type String: "+typeof(Str));
+     document.write("<br>Data Type String: "+typeof(string));
+     document.write("<br>Data Type Bool: "+typeof(bool));
+
+    var obj = {
+        key : 15,
+        value: "Something",
+        address: "swargate"
+    }
+//    obj = 0;
+    document.write("<br>Data Type Obj Value: "+obj.value);
+    document.write("<br>Data Type Object : "+typeof(obj));
+        document.write("<br>Data Type null : "+typeof(Empty));
+    document.write("<br>Data Type Array: "+typeof(arr));
+    
+    function display(){
+        document.write("<br><h3>Display function</h3>");
+    }
+    
+    display();
+document.write("<br>Data Type function: "+typeof(display));
+</script>
+</html>
