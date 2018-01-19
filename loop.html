@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Loop</title>
+</head>
+
+<body>
+    <h1>Loop</h1>
+</body>
+<script>
+    document.write("<br>Looping");
+    for (i = 0; i < 5; i++) {
+        document.write("<br>value Of i : " + i);
+    }
+
+    var arr = ["codekul", true, 0, "123", 125, 'Melayer'];
+    arr.forEach(function(curret, index, array) {
+        document.write(`<br> num : ${curret} Index : ${index} Array : ${array}`);
+    });
+
+
+    for (var arr_values of arr) {
+        document.write(`<br> Array Vales : ${arr_values}`);
+    }
+    for (var arr_keys in arr) {
+        document.write(`<br> Array Index : ${arr_keys}`);
+    }
+    var obj = {
+        name: "codekul",
+        address: "Swargate"
+    }
+ var obj = [
+        {
+            name: "Codekul",
+            address: "Swargate",
+        },
+        {
+            name: "Melayer",
+            address: "SWargate"
+        },
+        {
+            name: "codekul",
+            address: "NalStop"
+        }
+    ] 
+ for (var obj_values of obj) {
+        document.write(`<br> Object Vales : ${obj_values.name} Object Address : ${obj_values.address} `);
+    }
+</script>
+
+</html>

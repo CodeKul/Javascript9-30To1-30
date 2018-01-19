@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+   <h1>Function</h1> 
+</body>
+<script>
+function fun_name(){
+    document.write("This is function body");
+    document.write("<br>function Call ended");
+} 
+
+function add(){
+    var num1 = 15;
+    var num2 = 78;
+    document.write("<br>Addition is : "+(num1+num2));
+}
+
+function dynamic_Add(num1=456,num2=47){
+    document.write("<br>Addition is : "+(num1+num2));
+}
+ 
+
+fun_name();
+add();
+dynamic_Add(10,45);
+dynamic_Add();
+dynamic_Add(10);
+dynamic_Add(10,30);
+    
+function sqr(num)
+{
+    return (num*num);
+}
+var result = sqr(15);
+document.write("<br>Squre And Addition : "+(result));    
+document.write("<br>Squre Is : "+sqr(14));
+var nest_cal = dynamic_Add(sqr(5),45);
+   
+</script>
+</html>

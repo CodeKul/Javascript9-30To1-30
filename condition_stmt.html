@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COndition Statments</title>
+</head>
+<body>
+ <h1>Conditions Statments</h1>   
+</body>
+<script>
+    var a = 25;
+    var b = 65;
+    document.write("<br>If conditions");
+    if(0){
+        document.write("<br>True");
+    }
+    else if(b==65){
+        document.write("<br>B == 65");
+    }
+    else{
+        document.write("<br>False");
+    }
+    
+    document.write("<br>Switch conditions");
+    switch(1){
+        case 1: document.write("<br>One");
+            break;
+            case 2: document.write("<br>Two");
+            break;
+        default:document.write("<br>Default");
+            break;
+    }
+    
+    document.write("<br>While conditions");
+    var i=1;
+    while(i<5){
+        document.write("<br>value : "+i);
+        i++;
+    }
+    document.write("<br>Do While conditions");
+    document.write("<br>I: "+i);
+//    i=5;
+    do{
+        document.write("<br>value : "+i);
+        i++;
+    }while(i<10);
+</script>
+</html>
