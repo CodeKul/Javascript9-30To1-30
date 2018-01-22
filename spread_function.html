@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spread Function</title>
+</head>
+<body>
+   <h1>Spread function</h1> 
+</body>
+<script>
+    var arr = ["javascript","html","css","bootstrap","jquery"];
+//    var arr_join = arr.join(" ");
+    document.write("<br> array : "+arr);
+//    document.write("<br> Array_join : "+arr_join);
+    document.write("<br> type OF array : "+typeof(arr));
+//    document.write("<br> type OF Array_join : "+typeof(arr_join));
+     document.write("<br>");
+//    var variable_str = (...arr);
+    document.write(...arr);
+    console.log(...arr);
+    
+    var send_arr = ["codekul","getin@codekul.com","Pune"];
+    function sendData(name,email,address){
+        document.write("<br>data send to : "+ name +"On email : "+ email +"at address : "+ address);
+    }
+//    sendData("codekul","getin@codekul.com","Pune");
+    sendData(...send_arr);
+    var third = ["third",...arr,...send_arr];
+    console.log(third);
+    document.write("<br>Third Array : "+third);
+</script>
+</html>

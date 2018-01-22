@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desructing function</title>
+</head>
+<body>
+    <h1>Desructing function</h1>
+</body>
+<script>
+   var [one,two,three,,five] = ["one","two","three","four","five"];
+    document.write("<br>Desructing : "+one,three,five);
+    
+    var obj = {
+        name:"codekul",
+        address:"swargate"
+    }
+    document.write("<br>new one is :"+obj.name);
+    document.write("<br>new one is :"+obj["address"]);
+    
+    var {name,address} = {name:"codekul",address:"nalstop"};
+    document.write("<br>new one is :"+name);
+    document.write("<br>new one is :"+address);
+</script>
+</html>

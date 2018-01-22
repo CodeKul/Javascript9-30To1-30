@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function In javascript</title>
+</head>
+<body>
+    <h1>Function</h1>
+</body>
+<script>
+var vari_fun = function fun(){
+   document.write("<br>VARIABLE FUNCTION"); 
+}
+
+var vari_fun1 = function(){
+   document.write("<br>VARIABLE FUNCTION"); 
+}
+
+var sum = function(num1,num2){
+    return (num1+num2);
+}
+vari_fun();
+vari_fun1();
+document.write("<br>Addtion FUNCTION : "+(sum(25,45)));
+var res = sum(15,78);
+document.write("<br>Addtion FUNCTION : "+res);
+    
+var sub = function(num1,num2){
+    document.write("<br>Sub : "+(num1-num2));
+}(85,5); 
+    
+var display_details = function(name,email,phone){
+    document.write("<br>Welecome "+name);
+    document.write("<br>We send the confimation mail on your mail ID : "+email);
+    document.write("<br>We will contact you soon : "+phone);
+}
+display_details("codekul","getin@codekul.com","9545896226");
+display_details("Melayer","hr@Melayer.com","9545898228");
+    
+    
+var multi = (num1,num2) => (num1*num2);
+
+document.write("<br><h1>Multiplication : "+multi(10,9)+"</h1>");
+</script>
+</html>
