@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+    <h1>Array</h1>
+</body>
+<script>
+//    First Method
+    var old_method = new Array();
+    old_method[0] = "Old_array";
+    old_method[1] = "css";
+    old_method[2] = "bbotstrap";
+    old_method[3] = "javascript";
+    
+    document.write("<br>Old Array  : "+old_method);
+    
+//    Second Way of Array Declartion
+    var arr = ["Second_array","javascript","jquery","html"];
+    
+    var arr1 = new Array();
+    //Insrting one or more element to the end of array
+    arr1.push("New_array");
+    arr1.push("Jquery");
+    arr1.push("javascript","bootstrap");
+    
+    document.write("<br>Push Method: "+arr1);
+     //Removing only one element to the end of array
+    arr1.pop();
+    document.write("<br>Pop Method : "+arr1);
+    arr1.unshift("Html5","css");
+    document.write("<br>Unshift Method : "+arr1);
+    arr1.shift();
+    document.write("<br>Shift Method : "+arr1);
+    document.write("<br>Array Lenght: "+arr1.length);
+    var arr_concat = arr1.concat(arr,old_method);
+    document.write("<br>Array Concat: "+arr_concat);
+//    document.write("<br>Array join: "+arr1.join("$"));
+    var join_array = arr1.join("*");
+    document.write("<br>Array_join : "+typeof(join_array));
+    document.write("<br>Array1 : "+arr1);
+    arr1.splice(1,2);
+    document.write("<br>splice : "+arr1);
+    arr1.splice(1,0,"ecma","bootstrap");
+    document.write("<br>splice : "+arr1);
+    var slice_Array = arr_concat.slice(5,10);
+    document.write("<br>Slice Method : "+slice_Array);
+    document.write("<br>IndexOf : "+arr_concat.indexOf("Javascript"));
+    document.write("<br>Last Index : "+arr_concat.lastIndexOf("javascript"));
+    document.write("<br>IndexOf : "+arr1+"<br>");
+    arr1.reverse();
+    document.write("<br>Reverse : "+arr1+"<br>");
+    console.log(arr1.sort(function(a, b) {
+        return b - a
+    }));
+    document.write("<br>"+arr1.sort());
+    document.write("<br>index of javascript : "+arr1.indexOf("javascript"));
+</script>
+</html>
