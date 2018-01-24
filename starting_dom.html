@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+    <style>
+        #myID{
+           color: darkgreen;
+        }
+        h1{
+            color: blue;
+            border:2px solid white;
+            padding: 25px;
+            font-size: 55px;  
+        }
+        .myclass{
+            padding: 15px;
+            font-size: 18px;
+            color: darkred;
+        }
+    
+    </style>
+</head>
+<body bgcolor="aqua">
+    <h1 id="myID">DOM intro</h1>
+    <p class="myclass">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus recusandae eum fugiat aperiam natus fugit ut cupiditate nisi eaque molestias culpa, vero illo libero officia.
+    </p>
+    <h3>Selector</h3>
+    <div class="myclass">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique dicta, illo veritatis autem libero voluptatum, quae harum suscipit, quisquam reprehenderit ut ad rerum asperiores, quam.
+    </div>
+    <h1>This is demo image</h1>
+    <img src="../Bootstrap_Template/images/s1.jpeg" alt="image">
+    <img src="../Bootstrap_Template/images/s1.jpeg" alt="image">
+    <img src="../Bootstrap_Template/images/s1.jpeg" alt="image">
+</body>
+<script>
+    
+    
+//    console.log(tag_header);
+    var tag = document.getElementsByTagName("h1")[0];
+//    console.log(tag);
+//    tag.innerHTML = "Welcome to javascript";
+    var para = document.getElementsByTagName("p")[0];
+    para.innerText = "this is first paragraph and i am displaing the selection of Dom using tag name";
+    var div = document.getElementsByTagName("div")[0];
+//    console.log(para);
+//    console.log(div);
+    console.log(document.head.childNodes[5].innerHTML);
+    var tag_header = document.getElementsByTagName("h1");
+    for(i=0;i<tag_header.length;i++){
+        tag_header[i].innerHTML = "Display content";
+    }
+    var my_Cls = document.getElementsByClassName("myclass")[1];
+    console.log(my_Cls);
+    my_Cls.innerHTML = "now i am selecting the node value using JAvascript<h6>InnerText</h6>";
+    console.log(my_Cls.childNodes[0]);
+    my_Cls.childNodes[0].textContent = "changing thing using javascript";
+   
+    var myID = document.getElementById("myID");
+    console.log(myID);
+    myID.style.backgroundColor = "yellow";
+     var img = document.getElementsByTagName("img")[0];
+    console.log(img);
+    img.src = "../Bootstrap_Template/images/s3.jpeg";
+    img.style.borderRadius = "50px";
+</script>
+</html>

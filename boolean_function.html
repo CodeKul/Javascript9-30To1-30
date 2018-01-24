@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Boolean function</title>
+</head>
+
+<body>
+    <h1>Boolean function</h1>
+</body>
+<script>
+    var bool1 = new Boolean(1);
+    document.write("<br>Boolean : " + bool1);
+    var bool2 = new Boolean(0);
+    document.write("<br>Boolean : " + bool2);
+    var bool3 = new Boolean("Something");
+    document.write("<br>Boolean : " + bool3);
+    var bool4 = new Boolean(undefined);
+    document.write("<br>Boolean : " + bool4);
+    var bool5 = new Boolean(NaN);
+    document.write("<br>Boolean : " + bool5);
+    var bool6 = new Boolean("");
+    document.write("<br>Boolean : " + bool6);
+    var bool7 = new Boolean(-8);
+    document.write("<br>Boolean : " + bool7);
+    var bool8 = new Boolean(null);
+    document.write("<br>Boolean : " + bool8);
+
+    var num = 20;
+    var str = "Something";
+    var bool = true;
+
+    function fun() {
+        console.log("Welcome");
+    }
+    var arr = ["something", 125, 15, true, 0, 'tell'];
+    var empty = null;
+    var obj = {
+        name: "codekul",
+        address: "swargate"
+    }
+    document.write("<br>Number : " + typeof(num));
+    document.write("<br>str : " + typeof(str));
+    document.write("<br>Boolean : " + typeof(bool));
+    document.write("<br>fun : " + typeof(fun));
+    document.write("<br>arr : " + typeof(arr));
+    document.write("<br>empty : " + typeof(empty));
+    document.write("<br>obj : " + typeof(obj));
+</script>
+
+</html>

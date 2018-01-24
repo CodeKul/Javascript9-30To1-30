@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date And time function</title>
+    <style>
+        #Display {
+            height: 100px;
+            width: 500px;
+            /*            background-color: aqua;*/
+            border: 2px solid red;
+            padding: 20px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Date and Time function</h1>
+    <div id="Display">
+
+    </div>
+</body>
+<script>
+    var New_date = new Date();
+    document.write("<br>Date : " + New_date);
+    document.write("<br>Date : " + New_date.getDate());
+    document.write("<br>day : " + New_date.getDay());
+    document.write("<br>Year : " + New_date.getFullYear());
+    document.write("<br>Hours : " + New_date.getHours());
+    document.write("<br>Minutes : " + New_date.getMinutes());
+    document.write("<br>Sec : " + New_date.getSeconds());
+    document.write("<br>Sec : " + New_date.getMilliseconds());
+    document.write("<br>Date String : " + New_date.toDateString());
+    document.write("<br>To local String : " + New_date.toLocaleString());
+    document.write("<br>To local date String : " + New_date.toLocaleDateString());
+    document.write("<br>To local timie String : " + New_date.toLocaleTimeString());
+
+
+    
+    function display() {
+        var now = new Date();
+        var hours = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+        var mili = now.getMilliseconds();
+        document.getElementById("Display").innerHTML = hours + " : " + min + " : " + sec + " : " + mili;
+    }
+    setInterval("display()",10);
+    
+</script>
+
+</html>

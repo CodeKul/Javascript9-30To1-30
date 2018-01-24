@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Math function</title>
+</head>
+<body>
+    <h1>Math function</h1>
+</body>
+<script>
+var arr = [25,58,78,96,48,0,-3];
+var pow = (num,pow) => Math.pow(num,pow) ;
+var result = pow(5,3);
+document.write(`<br>Squre of number = ${result}`);
+document.write(`<br>Squre of number = ${pow(6,2)}`);
+document.write("<br>PI value : "+Math.PI); 
+document.write("<br>PI value : "+Math.round(Math.PI));
+document.write("<br>Round value : "+Math.round(3.5)); 
+document.write("<br>Ceil function : "+Math.ceil(4.2));
+document.write("<br>floor function : "+Math.floor(4.2));
+document.write("<br>Random value : "+Math.random(0,5));
+document.write("<br>Squre Root function : "+Math.sqrt(256));
+document.write("<br>Absoulute function : "+Math.abs(+4));
+document.write("<br>Absoulute function : "+Math.abs(-4));
+document.write("<br>Sin function : "+Math.sin(90));
+document.write("<br>MAx function : "+Math.max(...arr));
+document.write("<br>min function : "+Math.min(...arr));
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events Js</title>
+    <style>
+        img{
+            height: 250px;
+            width: 250px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="fun(this);">events</h1>
+    <img src="../Bootstrap_Template/images/s1.jpeg">
+    <img src="../Bootstrap_Template/images/s2.png">
+    <img src="../Bootstrap_Template/images/s3.jpeg">
+</body>
+<script>
+  function fun(e){
+      e.innerHTML = "click Event";
+      e.style.backgroundColor = "darkblue";
+      e.style.fontSize = "60px";
+      e.style.padding = "25px";
+      e.style.border = "5px groove yellow";
+      e.style.borderRadius = "25px";
+//      alert("click event")
+  } 
+    var img = document.getElementsByTagName("img");
+    for(i=0;i<img.length;i++){
+        img[i].onmouseover = function(e){
+            console.log(e);
+            e.target.style.borderRadius = "50%";
+        }
+        img[i].onmouseout = function(e){
+            console.log(e);
+            e.target.style.borderRadius = "5px";
+        }
+    }
+</script>
+</html>
