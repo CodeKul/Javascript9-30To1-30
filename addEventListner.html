@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listerner in javascript</title>
+</head>
+
+<body>
+    <h1>Events Listers</h1>
+    <img src="https://static.pexels.com/photos/516541/pexels-photo-516541.jpeg" height="150" width="150">
+    <img src="https://static.pexels.com/photos/516541/pexels-photo-516541.jpeg" height="150" width="150">
+</body>
+<script>
+    var img = document.getElementsByTagName("img")[0];
+    var img1 = document.getElementsByTagName("img")[1];
+    img.onload = display;
+
+    function display() {
+        img1.src = "https://static.pexels.com/photos/566888/pexels-photo-566888.jpeg";
+    }
+
+    /*var h1 = document.getElementsByTagName("h1")[0];
+    h1.ondblclick = function() {
+        h1.style.color = "yellow";
+        h1.style.fontSize = "60px";
+        h1.style.border = "5px solid red";
+    }*/
+    
+    var h2 = document.getElementsByTagName("h1")[0];
+//    h2.addEventListener("click",dis);
+    img.ondblclick = dis;
+    function dis() {
+        h2.style.color = "yellow";
+        h2.style.fontSize = "60px";
+        h2.style.border = "5px solid red";
+    }
+    h2.removeEventListener("ondblclick",dis);
+    
+</script>
+
+</html>

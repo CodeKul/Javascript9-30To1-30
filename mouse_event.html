@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse event</title>
+    <style>
+        #MyID {
+            height: 250px;
+            width: 250px;
+            padding: 25px;
+            border: 5px solid red;
+            background-color: aqua;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Mouse Event</h1>
+    <div id="MyID">
+        
+    </div>
+</body>
+<script>
+var h1 = document.getElementsByTagName("h1")[0];
+var div  = document.getElementById("MyID");
+   /* h1.onclick = function(name){
+        console.dir(h1);
+        console.dir(name);
+        div.innerHTML = "user click on X position : "+' '+name.clientX+' '+"and Y position : "+ ' ' +name.clientY+' '+"at target on element : "+' '+name.type;
+    }
+    div.onmouseover = function(name){
+       console.dir(h1);
+        console.dir(name);
+        div.innerHTML = "user click on X position : "+' '+name.clientX+' '+"and Y position : "+ ' ' +name.clientY+' '+"at target on element : "+' '+name.type;
+    }
+    div.onmousemove = function(name){
+       console.dir(h1);
+        console.dir(name);
+        div.innerHTML = "user click on X position : "+' '+name.clientX+' '+"and Y position : "+ ' ' +name.clientY+' '+"at target on element : "+' '+name.type;
+    } 
+    div.onmouseover = function(name){
+//       console.dir(h1);
+//        console.dir(name);
+        div.innerHTML = "user click on X position : "+' '+name.clientX+' '+"and Y position : "+ ' ' +name.clientY+' '+"at target on element : "+' '+name.type;
+    }
+    div.onmouseout = function(name){
+//       console.dir(h1);
+//        console.dir(name);
+        h1.innerHTML = "user click on X position : "+' '+name.clientX+' '+"and Y position : "+ ' ' +name.clientY+' '+"at target on element : "+' '+name.type;
+    }*/
+    div.onmousedown = function(name){
+//       console.dir(h1);
+//        console.dir(name);
+        div.innerHTML = "user click on X position : "+' '+name.clientX+' '+"and Y position : "+ ' ' +name.clientY+' '+"at target on element : "+' '+name.type;
+    }
+    div.onmouseup = function(name){
+//       console.dir(h1);
+//        console.dir(name);
+        h1.innerHTML = "user click on X position : "+' '+name.clientX+' '+"and Y position : "+ ' ' +name.clientY+' '+"at target on element : "+' '+name.type;
+    }
+    
+    
+</script>
+</html>
