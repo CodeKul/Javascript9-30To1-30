@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Query Selector</title>
+</head>
+
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About us</li>
+        <li>Services</li>
+        <li>Contact Us</li>
+        <li>Home</li>
+    </ul>
+    <p class="myClass">
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor sed aliquid voluptatibus ad veniam, nisi necessitatibus mollitia, omnis quam enim quas atque ab aut est porro? Ipsum ad iure, illum deleniti maxime mollitia qui natus beatae cupiditate molestias ullam quidem aliquam, dolore dolor modi eum minus consectetur accusamus sunt rerum.
+    </p>
+    <div id="myId">
+        <h1 class="header">This is Header</h1>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deserunt ipsum illum nostrum ducimus tempora.
+    </div>
+</body>
+<script>
+    var select = document.querySelector("li");
+    var myclass = document.querySelector("p.myClass");
+    console.dir(myclass);
+    myclass.style.padding = "25px";
+    myclass.style.backgroundColor = "lightgray";
+    /*var myID = document.querySelector("div#myId>h1.header");
+        console.dir(myID);
+        myID.style.backgroundColor = "aqua";
+        myID.style.padding = "25px";
+        myID.style.color = "darkblue";
+        myID.style.textAlign = "center";*/
+
+    var header = document.getElementsByClassName("header")[0];
+    console.dir(header);
+    header.style.backgroundColor = "aqua";
+    header.style.padding = "25px";
+    header.style.color = "darkblue";
+    header.style.textAlign = "center";
+</script>
+
+</html>

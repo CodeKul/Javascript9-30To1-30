@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ul li Mouse Event</title>
+    <style>
+        /*ul{
+            background-color: aqua;
+            width: 20%;
+            padding: 25px;
+        }*/
+        li{
+            list-style-type: none;
+            padding: 25px;
+            margin: 10px;
+            font-size: 24px;
+            color: black;
+            border-radius: 15px;
+            border:2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Services</li>
+        <li>Gallery</li>
+        <li>Contact US</li>
+    </ul>
+</body>
+<script>
+var text = document.getElementsByTagName("li");
+    for(let i=0;i<text.length;i++){
+        text[i].onmouseover = function(e){
+          e.target.style.backgroundColor = "red";
+            e.target.style.color = "white";
+        }
+        text[i].onmouseout = function(e){
+          e.target.style.backgroundColor = "white";
+             e.target.style.color = "black";
+        }
+   }
+</script>
+
+</html>

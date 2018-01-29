@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Color html</title>
+    <style>
+        #myDiv {
+            height: 600px;
+            width: 1000px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myDiv">
+        <button onclick="fun1();">Red</button>
+        <button onclick="fun2();">Blue</button>
+        <button onclick="fun3();">Green</button>
+    </div>
+</body>
+<script>
+    var div = document.querySelector("#myDiv");
+    function fun1(){
+        div.style.backgroundColor = "red";
+    }
+</script>
+
+</html>

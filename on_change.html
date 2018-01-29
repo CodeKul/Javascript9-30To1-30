@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>On Change Event</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter Name" name="textName">
+    <!--    <button type="button" id="btn">Get Name</button>-->
+    <select id="select">
+       <option value="html">Html</option>
+       <option value="Css">Css</option>
+       <option value="Jquery">Jquery</option>
+       <option value="Javascript">Javascript</option>
+       <option value="Bootstrap">Bootstrap</option>
+   </select>
+    <div id="disName">
+
+    </div>
+</body>
+<script>
+    var disName = document.getElementById("disName");
+    var textName = document.getElementsByName("textName")[0];
+    var Select = document.getElementById("select");
+    //     console.dir(Select);
+    //    var btn = document.getElementById("btn");
+
+    textName.addEventListener("change", getName);
+
+    function getName() {
+        disName.innerHTML = textName.value;
+
+    }
+
+    Select.onchange = function(e) {
+        disName.innerHTML = Select.value;
+    }
+</script>
+
+</html>
