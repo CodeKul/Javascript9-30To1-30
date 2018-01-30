@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Key Events</title>
+</head>
+<body>
+   <input type="text" id="key"> 
+   <div id="MyID">
+       
+   </div>
+</body>
+<script>
+    document.getElementById("key").addEventListener("keydown",function(e){
+      document.getElementById("key").style.background = "aqua";
+       document.getElementById("key").style.padding = "5px";
+        document.getElementById("key").style.border = "1px solid blue"; 
+    },false);
+     document.getElementById("key").addEventListener("keyup",function(e){
+      document.getElementById("key").style.background = "lightgray";
+       document.getElementById("key").style.padding = "5px";
+        document.getElementById("key").style.border = "1px solid blue"; 
+    },false);
+</script>
+</html>

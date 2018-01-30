@@ -34,13 +34,17 @@
 <script>
 var text = document.getElementsByTagName("li");
     for(let i=0;i<text.length;i++){
-        text[i].onmouseover = function(e){
-          e.target.style.backgroundColor = "red";
-            e.target.style.color = "white";
+        text[i].onmouseover = function(){
+            this.style.backgroundColor = "red";
+            this.style.color = "white";
+//          e.target.style.backgroundColor = "red";
+//            e.target.style.color = "white";
         }
-        text[i].onmouseout = function(e){
-          e.target.style.backgroundColor = "white";
-             e.target.style.color = "black";
+        text[i].onmouseout = function(){
+            this.style.backgroundColor = "white";
+            this.style.color = "black";
+//          e.target.style.backgroundColor = "white";
+//             e.target.style.color = "black";
         }
    }
 </script>

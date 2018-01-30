@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>On submit event</title>
+    <style>
+        #error{
+            display: none;
+        }
+        #error1{
+            display: none;
+        }
+        #danger{
+            width:30%;
+            border:2px solid green;
+            background-color: lightgray;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="text.html" method="get" name="myForm">
+        <p>
+            <input type="text" name="myName" id="danger">
+             <span id="error">
+            Enter Valid Name
+        </span>
+        </p>
+       <p>
+           <input type="checkbox" id="check">
+           <span id="error1">
+            Select CheckBox
+        </span>
+       </p>
+       <p>
+           <input type="submit">
+       </p> 
+    </form>
+</body>
+<script>
+    var form_sub = document.getElementsByName("myForm")[0];
+    console.dir(document.getElementById("danger"));
+//    console.dir(form_sub);
+    form_sub.addEventListener("submit",function(e){
+        var input_value = document.getElementById("danger").value;
+        var check = document.getElementById("check").checked;
+        console.log((input_value == '') && (!(check)));
+        if((input_value == '') && (!(check)))
+            {
+                var error = document.getElementById("error");
+                var error1= document.getElementById("error1");
+                error.style.display = "block";
+                error1.style.display = "block";
+                var danger = document.getElementById("danger");
+                danger.style.border = "2px solid red"; 
+                e.preventDefault(); 
+            }
+        e.preventDefault();
+    })
+    
+</script>
+</html>
