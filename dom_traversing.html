@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dom traversing</title>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nisi accusamus perspiciatis maxime ipsa animi fugit libero sunt ut autem.
+    </p>
+    <div id="myID">
+        <h1>
+            this is header
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore a esse doloremque possimus sunt id deleniti libero amet impedit, aliquam.
+        </p>
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet.
+    </div>
+</body>
+    <script>
+        console.dir(document.body.parentElement);
+        
+        var myID = document.querySelector("div#myID");
+        console.log(myID.childNodes);
+        var h1 = myID.firstChild.nextSibling;
+        h1.addEventListener("click",function(){
+            this.innerHTML = "this is created using javascript";
+            this.style.color = "red";
+        });
+        console.log(myID.lastChild);
+    </script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove child</title>
+</head>
+<body>
+    <div id="myID">
+       <h1>this is header</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia quasi facere aspernatur illum maxime, sit assumenda possimus soluta facilis fuga.
+        </p>
+        <button id="btn">click me</button>
+    </div>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click",function(e){
+        var div = e.target.parentElement;
+//        console.log();
+        div.removeChild(div.firstElementChild);
+    })
+</script>
+</html>

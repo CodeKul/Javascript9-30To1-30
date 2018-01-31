@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Element</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio nisi accusamus perspiciatis maxime ipsa animi fugit libero sunt ut autem.
+    </p>
+    <div id="myID">
+        <h1>
+            this is header
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore a esse doloremque possimus sunt id deleniti libero amet impedit, aliquam.
+        </p>
+        
+    </div>
+    <div>
+        Lorem ipsum dolor sit amet.
+    </div>
+</body>
+    <script>
+        var myID = document.querySelector("div#myID");
+        var new_ele = document.createElement("p");
+        new_ele.innerHTML = "this is my new para created using vreate element";
+        new_ele.setAttribute("title","created element using DOM");
+        new_ele.setAttribute("id","new_id");
+        new_ele.setAttribute("class","h1 text-danger");
+//        new_ele.style.color = "blue";
+        myID.appendChild(new_ele);
+     document.getElementById("new_id").addEventListener("click",function(e){
+            new_ele.removeAttribute("class");
+        });
+    </script>
+</html>
