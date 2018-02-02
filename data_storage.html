@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Data Storage</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <input type="button" id="addList" value="Add" class="form-control btn-primary">
+                </div>
+                <input type="text" class="form-control" id="myText">
+            </div>
+            <input type="button" id="delete" value="Remove All" class="form-control btn-danger">
+            <ul class="list-group m-5" id="myUL">
+
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    var btn = document.getElementById("addList");
+    var myUL = document.getElementById("myUL");
+    var getList = localStorage.getItem("list");
+    myUL.innerHTML = getList;
+    btn.addEventListener("click", function() {
+        var myText = document.getElementById("myText").value;
+        var li = document.createElement("li");
+        var del = document.createElement("a");
+        del.setAttribute('href', '#');
+        del.innerHTML = 'X';
+        del.setAttribute('class', 'ml-auto');
+        li.innerHTML = myText;
+        li.setAttribute('class', 'list-group-item');
+        li.appendChild(del);
+        myUL.appendChild(li);
+        console.dir(myUL.outerHTML);
+        localStorage.setItem("list", myUL.outerHTML);
+    });
+    var remove = document.getElementById("delete");
+    remove.addEventListener("click", function() {
+          //     removng from local storage
+                localStorage.removeItem("list");
+        //        localStorage.clear();
+       //        delete localStorage.list;
+    });
+
+    /////////    Adding to localStorage
+    //    localStorage.setItem(key,value);
+    //    localStorage.key = "value";
+    //    localStorage["key"] = "value"
+
+    /////////    getting from local Storage
+    //    localStorage.key;
+    //    localStorage.getItem('key');
+    //    localStorage['key'];
+</script>
+
+</html>

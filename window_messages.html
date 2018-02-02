@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Window Messges</title>
+</head>
+
+<body>
+    <input type="text" id="myID">
+</body>
+<script>
+    
+    document.getElementById("myID").onchange = function() {
+        var display = document.getElementById("myID").value;
+//        alert(display);
+        console.log(display);
+        document.getElementById("myID").style.backgroundColor = "pink";
+    }
+//    var prompt = prompt("Enter Your Name","codekul");
+//    document.getElementById("myID").value = prompt;
+    
+    var retVal = window.confirm("r u want to leave the page");
+    if(retVal){
+        window.location.assign = "http://www.google.com";
+    }
+    
+    
+</script>
+
+</html>
