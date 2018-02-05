@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array reduce function</title>
+</head>
+
+<body>
+    <script>
+        var arr = [10, 20, 30, 40, 50];
+        //      array_name.map(current index value,current_index,whole_array)
+        var sum = arr.reduce(function(prev, next, index, array) {
+            //            console.log(prev);
+            //            console.log(next);
+            //            console.log(index);
+            //            console.log(array);
+            return (prev + next);
+        });
+        console.log("Sum Is : " + sum);
+
+
+        function sum_again() {
+            console.log(arguments);
+            var args = Array.prototype.slice.call(arguments);
+            return args.reduce(function(prev, current) {
+                return prev + current;
+            });
+        }
+        console.log(sum_again(10,20,30));
+    </script>
+
+
+</body>
+
+</html>

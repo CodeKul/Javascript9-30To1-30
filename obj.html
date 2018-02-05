@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+    <div id="demo">
+        
+    </div>
+</body>
+<script>
+
+var obj = {
+    name:"codekul",
+    address:"Swargate",
+    phone: 919545896226
+}  
+var json_str = JSON.stringify(obj);
+var json_obj = JSON.parse(json_str);
+console.log(json_str);
+console.log(json_obj);
+console.log(typeof(json_obj));
+console.log(obj.name);
+console.log(obj["address"]);
+console.log(obj["phone"]);
+   
+var json_data = '{"page":2,"per_page":3,"total":12,"total_pages":4,"data":[{"id":4,"first_name":"Eve","last_name":"Holt","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg"},{"id":5,"first_name":"Charles","last_name":"Morris","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/stephenmoon/128.jpg"},{"id":6,"first_name":"Tracey","last_name":"Ramos","avatar":"https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg"}]}';
+    var convert_obj = JSON.parse(json_data);
+    console.log(convert_obj);
+    console.log(typeof(convert_obj));
+</script>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function argument Prototype</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function sum(){
+        for(i=0;i<arguments.length;i++){
+            var res = 0;
+            res = res + arguments[i];
+        }
+        return res;
+    }
+    document.write("Addition is : "+sum(10,20,30));
+</script>
+</html>

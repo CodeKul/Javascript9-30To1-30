@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error Function</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function sum() {
+        var args = Array.prototype.slice.call(arguments);
+        return args.reduce(function(prev, curr) {
+            if (!isNaN(curr)) {
+                return (prev + curr);
+            }else {
+                throw Error("This is not a number : " + curr);
+            }
+        }, 0);
+    }
+//this is another way
+    
+    function another() {
+        try {
+            sum(1, 2, 3, 4, 5, "s");
+        } catch (e) {
+            console.error(e);
+        }
+    }
+    another();
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form API</title>
+</head>
+<body>
+    
+<input id="id1" type="number" max="100">
+<button onclick="myFunction()">OK</button>
+
+<p id="demo"></p>
+</body>
+<script>
+function myFunction() {
+    var txt = "";
+   console.dir(document.getElementById("id1").validity.rangeOverflow);
+    if (document.getElementById("id1").validity.rangeOverflow) {
+       txt = "Value too large";
+    }
+    else{
+        txt = "You Enter value is in between 0 to 100";
+    }
+    document.getElementById("demo").innerHTML = txt;
+}
+</script> 
+</html>
