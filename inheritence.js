@@ -1,0 +1,23 @@
+class person{
+    constructor(name,address){
+        this.name = name;
+        this.address = address;
+    }
+    display(){
+        console.log("Name : " + this.name + "Address : " + this.address);
+    }
+} 
+    
+class ext_class extends person{
+    constructor(){
+        super("extends","Inheritence");
+    }
+}
+
+var new_per = new person("codekul","swargate");
+var another_person = new person("Self","Self");
+new_per.display();
+another_person.display();
+    
+var ext_var = new ext_class();
+ext_var.display();

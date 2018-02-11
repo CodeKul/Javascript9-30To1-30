@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>dynamic Object</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var name;
+    var address;
+    var stud = {
+        name,
+        address,
+        accept(name, address){
+            this.name = name;
+            this.address = address;
+        },
+        display() {
+            console.log("Name : " + this.name);
+            console.log("address : " + this.address);
+        }
+    };
+
+     stud.accept("dummy", "road");
+     stud.display();
+    stud.accept("abc", "mg road");
+     stud.display();
+</script>
+
+</html>

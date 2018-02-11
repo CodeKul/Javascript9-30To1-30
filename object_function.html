@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object function</title>
+</head>
+<body>
+    
+</body>
+<script>
+var obj = {
+    name:"codekul",
+    address:"swargate",
+    display : function(){
+        console.log("this is a function call inside my Object");
+    }
+}
+obj.phone = "919545896226";
+obj.accept = function(){
+    console.log("this function is displayed outside of the object");
+}
+console.log(obj.display());
+console.log(obj.accept());
+   
+var new_obj = new Object();
+    new_obj.color = "red";
+    new_obj.size = "45";
+    new_obj.display = () => console.log("this is another way to store a object");
+    console.log(new_obj.color);
+</script>
+</html>
