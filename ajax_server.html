@@ -1,0 +1,26 @@
+<html>
+<body>
+<h1>Testing Ajax</h1>
+<button type="button" id="btn">SEND value</button>
+<input type="text" id="text">
+<div id="mydiv">
+</div>
+</body>
+<script>
+var mydiv = document.getElementById("mydiv");
+var btn = document.getElementById("btn");
+
+btn.addEventListener("click", function() {  
+        var httpreq = new XMLHttpRequest();
+        httpreq.onreadystatechange = function() {
+            console.log(this);
+            if (this.readyState == 4 && this.status == 200) {
+               mydiv.innerHTML = this.responseText;
+                }
+             }
+             var val_text = document.getElementById("text").value;
+             httpreq.open("get","ajax.php?name="+val_text);
+             httpreq.send();
+})
+</script>
+</html>

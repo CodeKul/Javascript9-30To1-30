@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax</title>
+</head>
+
+<body>
+    <button id="btnId">Get Data</button>
+    <div id="divId">
+
+    </div>
+   
+</body>
+<script>
+    var btnID = document.getElementById("btnId");
+    var divId = document.getElementById("divId");
+    btnID.addEventListener("click", function() {
+        var httpreq = new XMLHttpRequest();
+        httpreq.onreadystatechange = function() {
+            console.log(this);
+            if (this.readyState == 4 && this.status == 200) {
+                var res = this.responseText;
+                var obj = JSON.parse(res);
+                divId.innerHTML = "Page : "+ obj.page +"<br>Per Page : "+obj.per_page+"<br>Total : "+obj.total+"<br>Total PAges : "+obj.total_pages;
+                var person_info = obj.data;
+                for(i=0;i<person_info.length;i++){
+                    divId.innerHTML += "<br>";
+                    divId.innerHTML += "Person ID : " + person_info[i].id+ "<br>";
+                    divId.innerHTML += "Person name : "+person_info[i].first_name +"<br>";
+                    divId.innerHTML += "Person last : "+person_info[i].last_name+"<br>";
+                    var img = document.createElement("img");
+                    img.src = person_info[i].avatar;
+                    divId.appendChild(img);
+                    divId.innerHTML += "<br>";
+                }
+                
+            }
+        }
+//        httpreq.open("get", "trial.html");
+        httpreq.open("get","https://reqres.in/api/users?page=2");
+        httpreq.send();
+    })
+</script>
+
+</html>
