@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvac html</title>
+</head>
+
+<body>
+    <svg width="300" height="200">
+  <polygon points="100,10 40,198 190,78 10,78 160,198"
+  style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" 
+  />
+</svg>
+    <canvas height="200px" width="200px" style="border: 2px solid black;" id="canvac"></canvas>
+</body>
+<script>
+    var canvac = document.getElementById("canvac");
+    var draw = canvac.getContext("2d");
+    /*    this is for craetion of line
+        draw.moveTo(0,0);
+        draw.lineTo(200,200);
+        draw.stroke();
+        
+      creation of circle */
+    draw.beginPath();
+    draw.arc(100, 100, 50, 0, 2 * Math.PI);
+    draw.stroke();
+</script>
+
+</html>
