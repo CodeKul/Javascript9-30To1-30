@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+.cls {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+</style>
+<script>
+	
+	function allowDrop(eve){
+		eve.preventDefault();
+	}
+	function drop(ev){
+		ev.preventDefault();
+		var img_data = ev.dataTransfer.getData("dummy");
+		ev.target.appendChild(document.getElementById(img_data));
+	}
+	function drag(e){
+		e.dataTransfer.setData("dummy",e.target.id);
+	}
+
+
+
+</script>
+</head>
+<body>
+
+<p>Drag the W3Schools image into the rectangle:</p>
+
+<div class="cls" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<img id="drag1" src="https://s3.amazonaws.com/uifaces/faces/twitter/marcoramires/128.jpg" draggable="true" ondragstart="drag(event)">
+
+
+</body>
+</html>
